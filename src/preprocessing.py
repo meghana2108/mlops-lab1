@@ -19,7 +19,7 @@ def min_max_scale(values):
     lo, hi = min(values), max(values)
     if lo == hi:
         return [0.0 for _ in values]
-    return [(v - lo) / hi for v in values]
+    return [(v - lo) / (hi - lo) for v in values]
 
 
 def z_score(values):
